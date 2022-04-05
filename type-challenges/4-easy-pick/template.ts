@@ -3,10 +3,10 @@
  * @Autor: jind
  * @Date: 2022-03-26 17:29:24
  * @LastEditors: jind
- * @LastEditTime: 2022-04-05 20:10:51
+ * @LastEditTime: 2022-04-05 23:43:04
  */
 
-type MyPick<T, K> = any
+type MyPick<T, K extends keyof T> = any
 
 function myPick(todos, key) {
   console.log()
