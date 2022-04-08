@@ -3,10 +3,10 @@
  * @Autor: jind
  * @Date: 2022-03-26 17:29:24
  * @LastEditors: jind
- * @LastEditTime: 2022-04-05 23:43:04
+ * @LastEditTime: 2022-04-08 13:36:14
  */
-
-type MyPick<T, K extends keyof T> = any
+// K 'name '
+type MyPick<T, K> = {}
 
 function myPick(todos, key) {
   console.log()
@@ -15,14 +15,4 @@ function myPick(todos, key) {
   let a = 'e'
 
   console.log(todos)
-}
-
-type Horse = 's'
-type OnlyBoolsAndHorses = {
-  [key: string]: boolean | Horse
-}
-
-const conforms: OnlyBoolsAndHorses = {
-  del: true,
-  red: 's',
 }

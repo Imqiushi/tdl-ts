@@ -3,10 +3,14 @@
  * @Autor: jind
  * @Date: 2022-04-05 19:17:20
  * @LastEditors: jind
- * @LastEditTime: 2022-04-07 13:29:53
+ * @LastEditTime: 2022-04-08 13:07:21
  */
 
-type MyReadonly<T> = any
+type MyReadonly<T> = {
+  readonly [P in keyof T]: T[P]
+}
+
+// extends keyof typeof readonly  T[P]
 
 interface Todo {
   name: string
@@ -18,7 +22,7 @@ type r = keyof Todo // 'name' | 'age'
 function myReadonly(obj: any) {
   const result = {}
   for (const key in obj) {
-    result['readonly' + key] = obj[key]
+    // result['readonly' + key] = obj[key]
   }
 
   return result
