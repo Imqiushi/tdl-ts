@@ -3,7 +3,7 @@
  * @Autor: jind
  * @Date: 2022-04-09 22:18:44
  * @LastEditors: jind
- * @LastEditTime: 2022-04-09 22:24:49
+ * @LastEditTime: 2022-04-09 23:24:58
  */
 
 interface PointTest {
@@ -36,4 +36,9 @@ interface Name {
 
 interface AgeTest {
   age: number
+}
+
+interface Test {
+  a: string
+  b: string
 }
