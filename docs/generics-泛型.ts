@@ -3,7 +3,7 @@
  * @Autor: jind
  * @Date: 2022-04-08 23:36:28
  * @LastEditors: jind
- * @LastEditTime: 2022-04-13 12:50:38
+ * @LastEditTime: 2022-04-13 13:32:32
  */
 
 // 输入类型 => 返回同样类型
@@ -55,6 +55,9 @@ function getProperty<T, Key extends keyof T>(obj: T, key: Key) {
 }
 
 loggingIdentity({ name: 'xx', length: 33 })
+let x = { a: 1, b: 2, c: 3, d: 4 }
+getProperty(x, 'a')
+// getProperty(x, 'm')
 
 identity(1)
 identity2(3)
