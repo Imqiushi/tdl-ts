@@ -3,10 +3,10 @@
  * @Autor: jind
  * @Date: 2022-04-08 12:44:34
  * @LastEditors: jind
- * @LastEditTime: 2022-04-08 12:49:49
+ * @LastEditTime: 2022-04-17 21:54:44
  */
 
-type PersonDemo = { age: number; name: string; sex: 'male' | 'female' }
+type PersonDemo = { age: number; name: string; sex: 'male' | 'female'; alive: boolean }
 
 // indexed number
 type age = PersonDemo['age']
@@ -20,3 +20,9 @@ type MyArray = [{ name: 'Alice'; age: 15 }, { name: 'Bob'; age: 23 }, { name: 'E
 type array = MyArray[number]
 
 type akeyof = keyof array
+
+// string | number
+type I11 = PersonDemo['age' | 'name']
+
+// string | number | boolean
+type I22 = PersonDemo[keyof PersonDemo]
