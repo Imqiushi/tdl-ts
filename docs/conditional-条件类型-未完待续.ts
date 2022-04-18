@@ -3,7 +3,7 @@
  * @Autor: jind
  * @Date: 2022-04-17 21:55:36
  * @LastEditors: jind
- * @LastEditTime: 2022-04-17 22:13:12
+ * @LastEditTime: 2022-04-19 07:48:39
  */
 interface Animal {
   live(): void
@@ -54,3 +54,27 @@ createLabel(33)
 
 let CC = createLabel(Math.random() ? 'hello' : 42)
 // let c: NameLabel | IdLabel
+
+// 三目运算符 与 js类似
+//
+
+type TypeName<T> = T extends string
+  ? 'string'
+  : T extends number
+  ? 'number'
+  : T extends boolean
+  ? 'boolean'
+  : T extends undefined
+  ? 'undefined'
+  : T extends Function
+  ? 'function'
+  : 'object'
+
+type sth = TypeName<boolean>
+type sth1 = TypeName<string>
+type sth2 = TypeName<number>
+
+type sth3 = TypeName<() => void>
+
+// => union string | object
+type sth4 = TypeName<string | string[]>
