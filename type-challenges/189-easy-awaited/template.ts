@@ -3,11 +3,11 @@
  * @Autor: jind
  * @Date: 2022-04-18 21:55:05
  * @LastEditors: jind
- * @LastEditTime: 2022-04-19 07:35:50
+ * @LastEditTime: 2022-04-20 07:39:25
  */
 
 // 嵌套没法中断
-type MyAwaited<T> = T extends Promise<infer R> ? (R extends Promise<infer U> ? U : MyAwaited<R>) : T
+type MyAwaited<T> = T extends Promise<infer R> ? MyAwaited<R> : T
 
 type X = Promise<string>
 
