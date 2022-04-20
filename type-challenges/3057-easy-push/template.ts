@@ -3,7 +3,7 @@
  * @Autor: jind
  * @Date: 2022-04-08 22:36:04
  * @LastEditors: jind
- * @LastEditTime: 2022-04-20 08:00:58
+ * @LastEditTime: 2022-04-20 08:02:33
  */
 type Push<T extends any[], U> = [...T, U]
 
